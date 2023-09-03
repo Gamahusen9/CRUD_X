@@ -8,7 +8,7 @@ if (!isset($_SESSION["masuk"])) {
 require 'controller.php';
 $id = $_GET["id"];
 
-$student = query("SELECT * FROM students WHERE id =$id")[0];
+$student = query("SELECT * FROM siswa WHERE id =$id")[0];
 if (isset($_POST["submit"]))
     {
         header("Location: index.php");

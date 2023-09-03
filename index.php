@@ -7,7 +7,7 @@ if (!isset($_SESSION["masuk"])) {
 }
 
 require 'controller.php';
-$students = query("SELECT * FROM students");
+$students = query("SELECT * FROM siswa");
 
 if (isset($_POST["search"])) {
   $students = cari($_POST["keyword"]);

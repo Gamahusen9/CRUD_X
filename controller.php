@@ -34,7 +34,7 @@ function tambah($data)
 		
 	}
      
-    $query = "INSERT INTO students
+    $query = "INSERT INTO siswa
             VALUES
             ('',  '$nama', '$nis','$rombel', '$rayon', '$status', '$hobi', '$alamat', '$merk_laptop', '$gambar')
             ";
@@ -103,7 +103,7 @@ function upload() {
 function  hapus($id)
 {
     global $conn;
-    mysqli_query($conn, "DELETE FROM students WHERE id = $id");
+    mysqli_query($conn, "DELETE FROM siswa WHERE id = $id");
 
     return mysqli_affected_rows($conn);
 }
@@ -133,7 +133,7 @@ function ubah($data)
 
 
 
-    $query = "UPDATE students SET
+    $query = "UPDATE siswa SET
             
             nama = '$nama',
             nis = '$nis',
@@ -203,7 +203,7 @@ function updatef() {
 	return $namaFileBaru;
 }
 function cari($keyword){
-	$query = "SELECT * FROM students
+	$query = "SELECT * FROM siswa
 	WHERE 
 
 	nama LIKE '%$keyword%' OR
